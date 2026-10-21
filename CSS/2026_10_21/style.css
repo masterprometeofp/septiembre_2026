@@ -1,0 +1,117 @@
+/* /* SELECTOR POR ETIQUETA */
+/* h1 {
+	color: red;
+} */
+
+/* p {
+	color: orange;
+} */
+
+/* SELECTOR DE CLASE */
+/* .parrafo {
+	color: green;
+} */
+
+/* SELECTOR DE ID */
+/* #primerparrafo {
+	color: pink;
+} */
+
+/* SELECTOR UNIVERSAL */
+/* *{
+    color: red;
+}  */
+
+/* ESPECIFICIDAD */
+/* h2{
+    color: red !important;
+}
+
+.ejemplo{
+    color: blue;
+}
+
+#ejemplo{
+    color: orange
+} */
+
+/* EJEMPLO */
+/* header > h1{
+    color: orange
+}
+
+main p{
+    color: red;
+} */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: rgb(32, 32, 32);
+	color: whitesmoke;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+}
+
+header {
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+main {
+	height: 70vh;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main > ul {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px;
+	border: 1px whitesmoke dashed;
+	border-radius: 10px;
+    transition: 0.6s;
+}
+
+main > ul:hover{
+    background-color: orange;
+    color: black;
+    transform: scale(0.7);
+}
+
+footer {
+	height: 20vh;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer > p {
+	text-align: justify;
+}
