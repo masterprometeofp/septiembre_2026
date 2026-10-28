@@ -1,0 +1,20 @@
+div {
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	background-color: cadetblue;
+}
+
+body {
+	height: 500px;
+	border: 2px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    gap: 20px;
+    flex-wrap: wrap
+}
+
+body > div{
+    flex-grow: 1;
+}
