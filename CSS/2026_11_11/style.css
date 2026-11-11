@@ -1,0 +1,151 @@
+/* VARIABLES Y RESET */
+:root {
+	--primary-color: #ec3824;
+	--secondary-color: #f8f8fd;
+	--tertiary-color: #a7a9be;
+	--background-color: #141414;
+	--spacing: 20px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ACTIVAR EL SCROLL SUAVE */
+html {
+	scroll-behavior: smooth;
+}
+
+/* ESTILOS GENERALES */
+body {
+	background-color: var(--background-color);
+	color: var(--tertiary-color);
+	font-family: "Space Mono", monospace;
+}
+
+h1,
+#hero > h2 {
+	color: var(--primary-color);
+	font-family: "Creepster", system-ui;
+}
+
+h2,
+h3,
+h4 {
+	color: var(--secondary-color);
+	font-family: "Bebas Neue", sans-serif;
+}
+
+a {
+	color: var(--secondary-color);
+	text-decoration: none;
+	font-family: "Bebas Neue", sans-serif;
+}
+
+a:hover {
+	color: var(--primary-color);
+	transition: 0.5s;
+}
+
+ul {
+	list-style-type: none;
+}
+
+strong {
+	color: var(--primary-color);
+}
+
+/* HEADER */
+header {
+	padding: var(--spacing);
+}
+
+header > nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--spacing);
+	/* position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: var(--background-color);
+	z-index: 1; */
+}
+
+header > nav > ul {
+	display: flex;
+	gap: var(--spacing);
+}
+
+/* HERO */
+#hero {
+	margin-top: 80px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+#hero > h2 {
+	font-size: 68px;
+}
+
+#hero a {
+	border: solid 2px var(--primary-color);
+	color: var(--primary-color);
+	padding: 12px 18px;
+}
+
+/* SECCIONES DE PELICULAS */
+main > section {
+	padding: var(--spacing);
+}
+
+main > section > ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: var(--spacing);
+	padding: var(--spacing) 0;
+}
+
+main ul img {
+	width: 100%;
+	border: 1px solid var(--tertiary-color);
+}
+
+main li {
+	animation: auto reveal linear both;
+	animation-timeline: view();
+	animation-range: entry 5% cover 30%;
+}
+
+/* FOOTER */
+footer > h2 {
+	color: var(--primary-color);
+	font-family: "Creepster", system-ui;
+}
+
+footer {
+	padding: var(--spacing);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* ANIMACIONES */
+@keyframes reveal {
+	from {
+		opacity: 0;
+		transform: translateY(60px);
+	}
+	to {
+		opacity: 1;
+	}
+}
